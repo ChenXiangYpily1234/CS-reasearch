@@ -10,4 +10,5 @@
 - 网页生成会话/提示词/原始图：
 - PPTX 原生对象、文本、公式与连接线清单：
 - PDF/SVG/PNG/脚本/数据路径：
+- 布局与美化：使用 [presentation-skill](https://github.com/siril9/presentation-skill/blob/main/SKILL.md)；记录对齐、留白、字体层级、配色及信息密度调整。
 - 最终尺寸渲染检查、灰度检查与可编辑检查：NOT_RUN

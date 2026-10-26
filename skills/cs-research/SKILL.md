@@ -24,7 +24,7 @@ description: Use when a user requests a complete AI/ML research workflow, frozen
 | 5 筛选 | 每法先跑41，严格超过竞争方法才跑42；未改善记STOPPED_AFTER_41，缺少原始证据记BLOCKED_EVIDENCE。 |
 | 6 确认 | 全部候选达到终态后审查；[Paper StoryCraft](https://github.com/ChenXiangYpily1234/paper-storycraft-skills)定故事，有论文潜力再加43，并敲定消融与自选模型泛化。 |
 | 7 论文 | [Nature Writing](https://github.com/SyntaxSmith/nature-writing-skill/blob/main/SKILL.md)写作、[Anti-Defensive Writing](https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/blob/main/skills/anti-defensive-writing-en/SKILL.md)修订、独立[Peer Review](https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/peer-review/SKILL.md)审稿；根据证据修订。 |
-| 8 图形 | GPT网页端构思框图，[image-to-editable-ppt](https://github.com/ningzimu/image-to-editable-ppt-skill/blob/main/skills/image-to-editable-ppt/SKILL.md)重建白底可编辑PPT；[Scientific Visualization](https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/scientific-visualization/SKILL.md)控制数据图风格，按[图形brief](templates/figure-brief.md)验收。 |
+| 8 图形 | GPT网页端构思框图，[image-to-editable-ppt](https://github.com/ningzimu/image-to-editable-ppt-skill/blob/main/skills/image-to-editable-ppt/SKILL.md)重建白底可编辑PPT，再用[presentation-skill](https://github.com/siril9/presentation-skill/blob/main/SKILL.md)优化布局、排版和美观并渲染检查；[Scientific Visualization](https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/scientific-visualization/SKILL.md)控制数据图风格，按[图形brief](templates/figure-brief.md)验收。 |
 
 ## 关键执行决策
 
@@ -48,6 +48,7 @@ description: Use when a user requests a complete AI/ML research workflow, frozen
 | 顶会风格数据图 | [scientific-visualization](https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/scientific-visualization/SKILL.md) |
 | 框图语义与PPT设计 | [pptx-paper-figure-story](https://github.com/ChenXiangYpily1234/paper-storycraft-skills/blob/main/12-pptx-visual/SKILL.md) |
 | 图像重建为可编辑PPT | [image-to-editable-ppt](https://github.com/ningzimu/image-to-editable-ppt-skill/blob/main/skills/image-to-editable-ppt/SKILL.md) |
+| PPT布局、排版与美化 | [presentation-skill](https://github.com/siril9/presentation-skill/blob/main/SKILL.md) |
 
 ## 交付与验证
 

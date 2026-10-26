@@ -95,6 +95,10 @@ seed 41 门槛和 12 选 1 是探索性筛选，报告选择过程。seed 43 是
 
 用 ChatGPT/GPT 网页端构思方法图，保存提示词、会话、原始图片与版本。随后使用 **[image-to-editable-ppt](https://github.com/ningzimu/image-to-editable-ppt-skill/blob/main/skills/image-to-editable-ppt/SKILL.md)**，重建白底、对象级可编辑 PPT 框图；配合 [Paper StoryCraft](https://github.com/ChenXiangYpily1234/paper-storycraft-skills) `12-pptx-visual` 检查语义。
 
+重建后使用 **[presentation-skill](https://github.com/siril9/presentation-skill/blob/main/SKILL.md)** 优化整页布局、对齐、留白、字体层级、配色和信息密度。保留可编辑文字、模块和连接线，先调整布局分配再考虑缩小字号。使用目标顶会论文图和用户提供的页面作视觉参考，优化后重新渲染，检查遮挡、越界、文字溢出及最终尺寸可读性。
+
+推荐顺序：Paper StoryCraft 确定内容与逻辑 → image-to-editable-ppt 重建可编辑对象 → [presentation-skill](https://github.com/siril9/presentation-skill/blob/main/SKILL.md) 优化布局与美观 → 渲染与可编辑检查。
+
 **[Scientific Visualization](https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/scientific-visualization/SKILL.md)** 负责数据图与出版风格。方法框图与统计图分开处理；数据图直接由真实结果和可复现绘图脚本生成，导出 PDF/SVG/PNG，不从生成式图片读取或重画数值。
 
 减少 AI 味道的具体验收：
@@ -123,6 +127,7 @@ seed 41 门槛和 12 选 1 是探索性筛选，报告选择过程。seed 43 是
 | 顶会风格数据绘图 | [Scientific Visualization](https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/scientific-visualization/SKILL.md) |
 | 科研框图语义与 PPT 设计 | [Paper StoryCraft PPTX Visual](https://github.com/ChenXiangYpily1234/paper-storycraft-skills/blob/main/12-pptx-visual/SKILL.md) |
 | 图像重建为可编辑 PPT | [Image to Editable PPT](https://github.com/ningzimu/image-to-editable-ppt-skill/blob/main/skills/image-to-editable-ppt/SKILL.md) |
+| PPT 布局、排版与美化 | [presentation-skill](https://github.com/siril9/presentation-skill/blob/main/SKILL.md) |
 
 本仓库仅链接第三方 skills，不复制分发其代码或附件。ChatGPT 网页端、GPU 服务器、模型监督与 PPT 转换运行时须在具体课题中实际准备和验证。
 

@@ -93,6 +93,9 @@ skills:
   editable_ppt:
     name: image-to-editable-ppt
     url: https://github.com/ningzimu/image-to-editable-ppt-skill/blob/main/skills/image-to-editable-ppt/SKILL.md
+  presentation:
+    name: presentation-skill
+    url: https://github.com/siril9/presentation-skill/blob/main/SKILL.md
 stages:
   - {id: literature, status: NOT_RUN}
   - {id: freeze, status: NOT_RUN}

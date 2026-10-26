@@ -36,6 +36,7 @@ class PackageTests(unittest.TestCase):
         self.assertEqual(len({x['id'] for x in c['stages']}), 8)
         self.assertEqual(c['skills']['story']['name'], 'paper-storycraft')
         self.assertEqual(c['skills']['editable_ppt']['name'], 'image-to-editable-ppt')
+        self.assertEqual(c['skills']['presentation']['name'], 'presentation-skill')
 
     def test_behavior_scenarios_are_parseable(self):
         data = yaml.safe_load((ROOT / 'tests/scenarios.yaml').read_text())

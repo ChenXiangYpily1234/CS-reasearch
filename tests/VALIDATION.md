@@ -32,8 +32,12 @@ The equal-threshold command was locally exercised by the evaluator and returned 
 
 ## Link coverage update
 
-The skill entrypoint directly links all seven configured external skills. An additional regression test checks dependency link coverage and removed terminology in skill Markdown.
+The skill entrypoint directly links all eight configured external skills. An additional regression test checks dependency link coverage and removed terminology in skill Markdown.
 
 ## Evidence limits
 
 The seed helper computes eligibility from supplied numeric inputs. It does not load the YAML, verify log provenance, establish supervision or launch training. The YAML is a protocol template, not a training runner or a filled-project schema validator. External skills are linked, not bundled or installed by these tests. No GPU experiment, ChatGPT browser session, scientific review of a real manuscript, figure generation or PPT rendering was performed.
+
+## Presentation layout dependency
+
+Added presentation-skill to the entrypoint, workflow, YAML, execution prompt and figure brief. Local package tests cover its configured name and direct link. The five-case independent behavioral evaluation above predates this addition; no new PPT rendering or behavioral forward evaluation is claimed.
