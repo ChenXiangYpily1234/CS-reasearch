@@ -23,6 +23,11 @@ class PackageTests(unittest.TestCase):
         self.assertEqual(c['literature']['paper_count'], {'min': 20, 'max': 30})
         self.assertEqual(c['experiment']['seeds'], [41, 42])
         self.assertEqual(c['experiment']['confirmation_seed'], 43)
+        inference = c['experiment']['inference']
+        self.assertTrue(inference['seed_equals_training_seed'])
+        self.assertTrue(inference['paired_seed_across_methods'])
+        self.assertEqual(inference['deterministic_inference_seed_status'], 'N/A')
+        self.assertEqual(inference['seed_unavailable_status'], 'UNCONTROLLED')
         self.assertEqual(c['experiment']['training_datasets'], 1)
         self.assertEqual(c['experiment']['test_datasets'], 2)
         self.assertEqual(c['methods']['count'], 12)
@@ -37,6 +42,14 @@ class PackageTests(unittest.TestCase):
         self.assertEqual(c['skills']['story']['name'], 'paper-storycraft')
         self.assertEqual(c['skills']['editable_ppt']['name'], 'image-to-editable-ppt')
         self.assertEqual(c['skills']['presentation']['name'], 'presentation-skill')
+
+    def test_inference_seed_policy_is_in_prompts_and_freeze(self):
+        for rel in ['prompts/chatgpt-ideation.md', 'prompts/research-workflow.md',
+                    'templates/experiment-freeze.md', 'references/workflow.md',
+                    'templates/method-card.md', 'SKILL.md']:
+            content = (SKILL / rel).read_text()
+            self.assertIn('推理', content, rel)
+            self.assertIn('seed', content, rel)
 
     def test_behavior_scenarios_are_parseable(self):
         data = yaml.safe_load((ROOT / 'tests/scenarios.yaml').read_text())
