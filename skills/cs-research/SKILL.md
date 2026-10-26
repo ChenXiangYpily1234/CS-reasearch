@@ -22,9 +22,9 @@ description: Use when a user requests a complete AI/ML research workflow, frozen
 | 3 方法 | M01加ChatGPT网页端11个方向，共12个；用[网页提示词](prompts/chatgpt-ideation.md)和[方法卡](templates/method-card.md)记录公式推导、理论支撑与方向差异。 |
 | 4 复现 | 先复现基线/竞争方法，profile争取0.95利用率，固定统一batch，冻结实测结果；实际Codex Luna high监督，保存模型ID及日志。 |
 | 5 筛选 | 每法先跑41，严格超过竞争方法才跑42；未改善记STOPPED_AFTER_41，缺少原始证据记BLOCKED_EVIDENCE。 |
-| 6 确认 | 全部候选达到终态后审查；Paper StoryCraft定故事，有论文潜力再加43，并敲定消融与自选模型泛化。 |
-| 7 论文 | Nature Writing写作、Anti-Defensive Writing修订、独立Peer Review审稿；根据证据修订。 |
-| 8 图形 | GPT网页端构思框图，image-to-editable-ppt重建白底可编辑PPT；Scientific Visualization控制数据图风格，按[图形brief](templates/figure-brief.md)验收。 |
+| 6 确认 | 全部候选达到终态后审查；[Paper StoryCraft](https://github.com/ChenXiangYpily1234/paper-storycraft-skills)定故事，有论文潜力再加43，并敲定消融与自选模型泛化。 |
+| 7 论文 | [Nature Writing](https://github.com/SyntaxSmith/nature-writing-skill/blob/main/SKILL.md)写作、[Anti-Defensive Writing](https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/blob/main/skills/anti-defensive-writing-en/SKILL.md)修订、独立[Peer Review](https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/peer-review/SKILL.md)审稿；根据证据修订。 |
+| 8 图形 | GPT网页端构思框图，[image-to-editable-ppt](https://github.com/ningzimu/image-to-editable-ppt-skill/blob/main/skills/image-to-editable-ppt/SKILL.md)重建白底可编辑PPT；[Scientific Visualization](https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/scientific-visualization/SKILL.md)控制数据图风格，按[图形brief](templates/figure-brief.md)验收。 |
 
 ## 关键执行决策
 
@@ -37,7 +37,17 @@ description: Use when a user requests a complete AI/ML research workflow, frozen
 
 ## 外部 skills
 
-原始入口和职责见[完整流程的Skills表](references/workflow.md#skills-与来源)。运行相关阶段前读取对应skill及必要依赖并记录来源版本。Paper StoryCraft负责定故事，Peer Review负责独立审核，Anti-Defensive Writing负责表达，Scientific Visualization负责数据图，image-to-editable-ppt替代persistent。链接不等于已安装；缺少必要依赖应记录阻塞。
+运行相关阶段前读取对应skill及必要依赖并记录来源版本。链接不等于已安装；缺少必要依赖应记录阻塞。
+
+| 职责 | 原始 skill 链接 |
+| --- | --- |
+| 论文故事与论证 | [paper-storycraft](https://github.com/ChenXiangYpily1234/paper-storycraft-skills) |
+| 论文写作 | [nature-writing](https://github.com/SyntaxSmith/nature-writing-skill/blob/main/SKILL.md) |
+| 独立科学审核 | [peer-review](https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/peer-review/SKILL.md) |
+| 防御性写作修订 | [anti-defensive-writing-en](https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/blob/main/skills/anti-defensive-writing-en/SKILL.md) |
+| 顶会风格数据图 | [scientific-visualization](https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/scientific-visualization/SKILL.md) |
+| 框图语义与PPT设计 | [pptx-paper-figure-story](https://github.com/ChenXiangYpily1234/paper-storycraft-skills/blob/main/12-pptx-visual/SKILL.md) |
+| 图像重建为可编辑PPT | [image-to-editable-ppt](https://github.com/ningzimu/image-to-editable-ppt-skill/blob/main/skills/image-to-editable-ppt/SKILL.md) |
 
 ## 交付与验证
 

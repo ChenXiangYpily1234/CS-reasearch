@@ -8,7 +8,7 @@ Before skill conversion, the repository had no SKILL.md, UI metadata, machine-re
 
 ## Current local verification
 
-- `python3 -m unittest discover -s tests -v`: 10 tests passed.
+- `python3 -m unittest discover -s tests -v`: 11 tests passed.
 - Official skill-creator `quick_validate.py skills/cs-research`: `Skill is valid!`.
 - All four YAML files parsed with PyYAML 6.0.3.
 - Local Markdown targets checked; skill-relative references stay inside the installable folder.
@@ -29,6 +29,10 @@ A separate agent read the completed skill, references and configuration, then ev
 | Story and figures | Correctly routes storytelling, writing, expression, independent review, scientific plots and editable PPT reconstruction. |
 
 The equal-threshold command was locally exercised by the evaluator and returned `eligible_seed_42: false`.
+
+## Link coverage update
+
+The skill entrypoint directly links all seven configured external skills. An additional regression test checks dependency link coverage and removed terminology in skill Markdown.
 
 ## Evidence limits
 

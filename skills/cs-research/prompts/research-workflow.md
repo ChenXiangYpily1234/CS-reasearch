@@ -7,8 +7,8 @@
 3. 设计M01，在ChatGPT网页端构思M02–M12，完成数学卡、理论文献和差异矩阵。
 4. 先复现基线与竞争方法，通过profile调batch争取0.95利用率，冻结统一batch与实测结果到main README。由实际Codex Luna high监督运行，保存模型ID、命令与日志。
 5. 所有方法配置一致；41超过竞争方法才运行42；不同卡和batch执行归入同一实验并保留执行记录。
-6. 12方法达到终态后统一审查，用Paper StoryCraft定故事；有论文潜力再增加43，并冻结消融和自选模型泛化。
-7. Nature Writing写作，Anti-Defensive Writing修订，独立Peer Review审核。
-8. GPT网页端构思图，用image-to-editable-ppt重建白底可编辑PPT；Scientific Visualization统一数据图风格，依真实顶会参考减少AI味道。
+6. 12方法达到终态后统一审查，用[Paper StoryCraft](https://github.com/ChenXiangYpily1234/paper-storycraft-skills)定故事；有论文潜力再增加43，并冻结消融和自选模型泛化。
+7. [Nature Writing](https://github.com/SyntaxSmith/nature-writing-skill/blob/main/SKILL.md)写作，[Anti-Defensive Writing](https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/blob/main/skills/anti-defensive-writing-en/SKILL.md)修订，独立[Peer Review](https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/peer-review/SKILL.md)审核。
+8. GPT网页端构思图，用[image-to-editable-ppt](https://github.com/ningzimu/image-to-editable-ppt-skill/blob/main/skills/image-to-editable-ppt/SKILL.md)重建白底可编辑PPT；[Scientific Visualization](https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/scientific-visualization/SKILL.md)统一数据图风格，依真实顶会参考减少AI味道。
 
 每个阶段报告证据、产物、状态与下一步。NOT_RUN、STOPPED_AFTER_41、FAILED、BLOCKED和COMPLETE须据实际情况填写。最终逐项核对README完成标准。

@@ -73,7 +73,7 @@
 
 所有方法达到终态后统一审查，按预先冻结的验证主指标选择最优方法，缺失第二 seed 的候选不能直接与完整双 seed 均值混排。记录选择规则、同分规则、全部 12 方法结果及成本。
 
-使用 **Paper StoryCraft 确定论文故事**：研究问题 → 共性缺口 → 核心洞察 → 方法机制 → 关键证据 → 结论范围。理解最优方法为何有效，检验替代解释；不按试验发生顺序写实验日记。
+使用 **[Paper StoryCraft](https://github.com/ChenXiangYpily1234/paper-storycraft-skills) 确定论文故事**：研究问题 → 共性缺口 → 核心洞察 → 方法机制 → 关键证据 → 结论范围。理解最优方法为何有效，检验替代解释；不按试验发生顺序写实验日记。
 
 判断是否具备论文潜力：新颖性是否经文献核验、效果与成本是否有实测证据、机制能否被消融检验、结果是否可复现。此判断不是接收保证。具备潜力时，为最终方法以及缺少对应结果的基线、竞争方法补跑 **seed 43**，保证配对比较。
 
@@ -83,19 +83,19 @@ seed 41 门槛和 12 选 1 是探索性筛选，报告选择过程。seed 43 是
 
 ## 7. 写作与独立审稿
 
-执行顺序：**Paper StoryCraft 定故事 → Nature Writing 写作 → Anti-Defensive Writing 修订表达 → Peer Review 独立审核 → 根据证据修订**。
+执行顺序：**[Paper StoryCraft](https://github.com/ChenXiangYpily1234/paper-storycraft-skills) 定故事 → [Nature Writing](https://github.com/SyntaxSmith/nature-writing-skill/blob/main/SKILL.md) 写作 → [Anti-Defensive Writing](https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/blob/main/skills/anti-defensive-writing-en/SKILL.md) 修订表达 → [Peer Review](https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/peer-review/SKILL.md) 独立审核 → 根据证据修订**。
 
 - 故事阶段输出研究问题、核心贡献、claim–evidence 映射和逐图叙事。
-- Nature Writing 根据目标会议篇幅与格式写作，不因使用该 skill 就改投 Nature。
-- Anti-Defensive Writing 直接使用其原始说明组织有说服力的论文表达。
+- [Nature Writing](https://github.com/SyntaxSmith/nature-writing-skill/blob/main/SKILL.md) 根据目标会议篇幅与格式写作，不因使用该 skill 就改投 Nature。
+- [Anti-Defensive Writing](https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/blob/main/skills/anti-defensive-writing-en/SKILL.md) 直接使用其原始说明组织有说服力的论文表达。
 - 独立审核使用独立审稿会话，提供稿件、冻结协议、方法公式、代码版本、原始结果与文献。审核正确性、创新性、统计、成本、公平性、引用和论文—代码一致性。
 - 审稿输出位置、问题、证据、影响、具体修改及复查状态；没有证据的批评标记不确定性，不编造审稿结论。
 
 ## 8. GPT 网页绘图与顶会风格
 
-用 ChatGPT/GPT 网页端构思方法图，保存提示词、会话、原始图片与版本。随后使用 **image-to-editable-ppt** 替代原要求中的 `@persistent`，重建白底、对象级可编辑 PPT 框图；配合 Paper StoryCraft `12-pptx-visual` 检查语义。
+用 ChatGPT/GPT 网页端构思方法图，保存提示词、会话、原始图片与版本。随后使用 **[image-to-editable-ppt](https://github.com/ningzimu/image-to-editable-ppt-skill/blob/main/skills/image-to-editable-ppt/SKILL.md)**，重建白底、对象级可编辑 PPT 框图；配合 [Paper StoryCraft](https://github.com/ChenXiangYpily1234/paper-storycraft-skills) `12-pptx-visual` 检查语义。
 
-**Scientific Visualization** 负责数据图与出版风格。方法框图与统计图分开处理；数据图直接由真实结果和可复现绘图脚本生成，导出 PDF/SVG/PNG，不从生成式图片读取或重画数值。
+**[Scientific Visualization](https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/scientific-visualization/SKILL.md)** 负责数据图与出版风格。方法框图与统计图分开处理；数据图直接由真实结果和可复现绘图脚本生成，导出 PDF/SVG/PNG，不从生成式图片读取或重画数值。
 
 减少 AI 味道的具体验收：
 

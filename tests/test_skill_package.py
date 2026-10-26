@@ -43,6 +43,14 @@ class PackageTests(unittest.TestCase):
         self.assertEqual(len({c['id'] for c in data['cases']}), 5)
         self.assertTrue(all(c['request'] and c['expected'] for c in data['cases']))
 
+    def test_skill_dependencies_have_direct_links(self):
+        c = yaml.safe_load((SKILL / 'config/workflow.yaml').read_text())
+        entry = (SKILL / 'SKILL.md').read_text()
+        for dependency in c['skills'].values():
+            self.assertIn('](' + dependency['url'] + ')', entry)
+        for f in SKILL.rglob('*.md'):
+            self.assertNotIn('persistent', f.read_text().lower())
+
     def test_portable_references(self):
         self.assertTrue((SKILL / 'SKILL.md').exists())
         files = list(SKILL.rglob('*.md'))
