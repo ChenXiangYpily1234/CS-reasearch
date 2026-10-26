@@ -21,6 +21,14 @@ experiment:
   test_dataset_revisions: [null, null]
   seeds: [41, 42]
   confirmation_seed: 43
+  inference:
+    seed_equals_training_seed: true
+    paired_seed_across_methods: true
+    deterministic_inference_seed_status: N/A
+    seed_unavailable_status: UNCONTROLLED
+    decoding_parameters: null
+    evaluation_sample_order_hash: null
+    evaluator_revision: null
   primary_metric: null
   metric_direction: null
   cost_metrics: [gpu_hours, wall_time_seconds, peak_memory_bytes]
