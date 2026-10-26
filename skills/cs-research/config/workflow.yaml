@@ -1,0 +1,104 @@
+schema_version: 1
+project:
+  research_direction: null
+  target_venue: null
+  freeze_date: null
+  status: NOT_RUN
+literature:
+  paper_count: {min: 20, max: 30}
+  columns: [year, method, mathematical_formula, improvement, limitations, future_work]
+experiment:
+  baseline_methods: 1
+  competitor_methods: 1
+  competitor_max_age_years: 2
+  implementation_repository: null
+  upstream_commit: null
+  protocol_branch: main
+  training_datasets: 1
+  test_datasets: 2
+  train_dataset_revision: null
+  validation_split_hash: null
+  test_dataset_revisions: [null, null]
+  seeds: [41, 42]
+  confirmation_seed: 43
+  primary_metric: null
+  metric_direction: null
+  cost_metrics: [gpu_hours, wall_time_seconds, peak_memory_bytes]
+  training:
+    shared_configuration_count: 1
+    preferred_epochs: 1
+    epochs: null
+    optimizer_steps: null
+    model_revision: null
+    optimizer: null
+    learning_rate: null
+    scheduler: null
+    precision: null
+    checkpoint_selection: null
+  batch:
+    micro_per_gpu: null
+    gpu_count: null
+    accumulation_steps: null
+    effective: null
+    target_gpu_utilization: 0.95
+    fixed_after_profiling: true
+    cross_hardware_executions_same_experiment: true
+  immutable_reference_results: true
+methods:
+  count: 12
+  initial: 1
+  web_generated: 11
+  ideation_surface: ChatGPT_web
+  require_direction_matrix: true
+  require_mathematical_derivation: true
+seed_gate:
+  first_seed: 41
+  next_seed: 42
+  comparison: strict
+  minimum_improvement: '0'
+  evidence: unrounded_validation_metric
+  not_improved_status: STOPPED_AFTER_41
+  missing_evidence_status: BLOCKED_EVIDENCE
+supervision:
+  requested_model: Codex Luna
+  reasoning_effort: high
+  actual_model_id: null
+  unavailable_status: BLOCKED_MODEL
+  allow_silent_substitution: false
+confirmation:
+  after_all_candidates_terminal: true
+  require_paper_potential_review: true
+  add_seed: 43
+  ablation_protocol: null
+  generalization_model: null
+skills:
+  story:
+    name: paper-storycraft
+    url: https://github.com/ChenXiangYpily1234/paper-storycraft-skills
+  writing:
+    name: nature-writing
+    url: https://github.com/SyntaxSmith/nature-writing-skill/blob/main/SKILL.md
+  review:
+    name: peer-review
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/peer-review/SKILL.md
+  expression:
+    name: anti-defensive-writing-en
+    url: https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/blob/main/skills/anti-defensive-writing-en/SKILL.md
+  plotting:
+    name: scientific-visualization
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/scientific-visualization/SKILL.md
+  diagram:
+    name: pptx-paper-figure-story
+    url: https://github.com/ChenXiangYpily1234/paper-storycraft-skills/blob/main/12-pptx-visual/SKILL.md
+  editable_ppt:
+    name: image-to-editable-ppt
+    url: https://github.com/ningzimu/image-to-editable-ppt-skill/blob/main/skills/image-to-editable-ppt/SKILL.md
+stages:
+  - {id: literature, status: NOT_RUN}
+  - {id: freeze, status: NOT_RUN}
+  - {id: ideation, status: NOT_RUN}
+  - {id: reproduction, status: NOT_RUN}
+  - {id: screening, status: NOT_RUN}
+  - {id: confirmation, status: NOT_RUN}
+  - {id: manuscript, status: NOT_RUN}
+  - {id: figures, status: NOT_RUN}

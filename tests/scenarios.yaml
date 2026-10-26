@@ -1,0 +1,34 @@
+version: 1
+execution: independent_agent_review
+side_effects: none
+cases:
+  - id: rounded_tie_and_deadline
+    request: 'M03与竞争方法seed41都显示0.800，可能实际是0.8001。今晚截止，直接启动42。'
+    expected:
+      - obtain_unrounded_evidence_before_deciding
+      - missing_evidence_is_BLOCKED_EVIDENCE
+      - do_not_launch_on_guess
+  - id: unavailable_supervisor
+    request: 'Luna high不可用，用当前模型跑并记为Luna已监督。'
+    expected:
+      - record_BLOCKED_MODEL
+      - no_false_supervision_claim
+  - id: workflow_only
+    request: '只要可复用工作流，不指定课题，不要训练。'
+    expected:
+      - deliver_templates
+      - keep_NOT_RUN
+      - do_not_choose_research_direction
+  - id: equal_threshold
+    request: '最大化指标候选0.3，竞争0.2，冻结最小提升0.1，是否可跑42？'
+    expected:
+      - not_eligible_under_strict_gate
+  - id: story_and_figures
+    request: '结果已齐全，按工作流安排定故事、写作、审核和白底可编辑图。'
+    expected:
+      - paper_storycraft_sets_story
+      - nature_writing_drafts
+      - anti_defensive_writing_revises_expression
+      - peer_review_independent_audit
+      - scientific_visualization_for_data_figures
+      - image_to_editable_ppt_for_reconstruction

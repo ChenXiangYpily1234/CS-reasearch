@@ -1,0 +1,6 @@
+interface:
+  display_name: "CS Research"
+  short_description: "完整科研工作流：文献、冻结实验、方法筛选、论文故事与可编辑作图"
+  default_prompt: "请使用 $cs-research 按冻结协议推进我的研究，先核对当前阶段、可用证据和阻塞项。"
+policy:
+  allow_implicit_invocation: true
