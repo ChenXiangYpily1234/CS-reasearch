@@ -18,7 +18,7 @@ description: Use when a user requests a complete AI/ML research workflow, frozen
 | 阶段 | 执行与证据 |
 | --- | --- |
 | 1 文献 | 检索核验20–30篇顶会论文；填写[文献表](templates/literature.md)，从共同局限提炼问题。 |
-| 2 冻结 | 选1通用基线、1两年内竞争方法；在竞争方法仓库开发，按[冻结表](templates/experiment-freeze.md)写入main README。固定1训练集、2测试集、41/42、主指标、训练预算。 |
+| 2 冻结 | 选1通用基线、1两年内竞争方法；在竞争方法仓库开发，按[冻结表](templates/experiment-freeze.md)写入main README。固定1训练集、2测试集、训练 seed 41/42（确认43）及对应同号的推理/评估 seed、主指标、训练预算与评估配置。 |
 | 3 方法 | M01加ChatGPT网页端11个方向，共12个；用[网页提示词](prompts/chatgpt-ideation.md)和[方法卡](templates/method-card.md)记录公式推导、理论支撑与方向差异。 |
 | 4 复现 | 先复现基线/竞争方法，profile争取0.95利用率，固定统一batch，冻结实测结果；实际Codex Luna high监督，保存模型ID及日志。 |
 | 5 筛选 | 每法先跑41，严格超过竞争方法才跑42；未改善记STOPPED_AFTER_41，缺少原始证据记BLOCKED_EVIDENCE。 |
@@ -29,6 +29,7 @@ description: Use when a user requests a complete AI/ML research workflow, frozen
 ## 关键执行决策
 
 - 基线与竞争方法结果一旦冻结，不得覆盖；勘误保留旧值并新增版本。新方法严格使用同一训练配置。
+- 每个训练 seed `s` 的推理/评估 seed 必须同为 `s`（41/42/43）；基线、竞争方法及候选在同 seed 下配对，统一评估数据/顺序、checkpoint 规则与通用解码参数。确定性推理记录 N/A；无法设置 seed 记录 UNCONTROLLED 和复现风险，不得虚称受控。方法特有推理差异需预先记录；ChatGPT 网页端构思的内部 seed 不属于可控实验 seed。
 - 按约定不同卡和batch执行归入同一实验ID，保留execution ID、硬件与有效batch，不把重复执行计为独立seed。
 - seed门槛用未四舍五入的原始数值、固定方向和阈值。可运行 `python3 scripts/check_seed_gate.py --candidate 0.8001 --competitor 0.8000 --direction maximize`。此命令仅计算资格，不证明来源、监督或训练完成，也不启动任务。
 - 监督模型不可用记BLOCKED_MODEL；不冒充指定模型监督。网页构思和绘图必须有实际会话证据。
